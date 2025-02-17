@@ -4,8 +4,6 @@ from dash import Dash, html, dcc,Input, Output, callback, dash_table
 from dash.dependencies import Input, Output
 import plotly.express as px
 import dash_bootstrap_components as dbc
-import plotly.graph_objects as go
-import dash_ag_grid as dag
 
 
 
@@ -43,7 +41,7 @@ header = html.Div(
 # Primera sección
 titulo_seccion_1 = html.H4('SEGUIMIENTO DE PROYECTOS', style={'textAlign': 'center'})
 
-@app.callback(
+@callback(
     [Output('gantt-chart', 'figure'),
      Output('costos-chart', 'figure'),
      Output('tbl_out', 'children'),
@@ -181,13 +179,6 @@ contenido_seccion_1 = html.Div(
     ],
     style={'margin': 'auto', 'padding': '10px'}
 )
-
-
-
-
-
-
-
 
 
 
